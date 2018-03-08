@@ -1,0 +1,15 @@
+./
+./usr
+./usr/lib
+./usr/lib/libnfc.so.5.0.1
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/libnfc.pc
+./usr/lib/libnfc.so.5
+./usr/lib/libnfc.a
+./usr/lib/libnfc.so
+./usr/include
+./usr/include/nfc
+./usr/include/nfc/nfc-emulation.h
+./usr/include/nfc/nfc-types.h
+./usr/include/nfc/nfc.h
+./host

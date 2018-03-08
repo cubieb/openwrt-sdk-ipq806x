@@ -1,0 +1,13 @@
+./
+./usr
+./usr/lib
+./usr/lib/libradcli.so.4.1.1
+./usr/lib/libradcli.so.4
+./usr/lib/libradcli.so
+./usr/lib/libfreeradius-client.so
+./usr/include
+./usr/include/radcli
+./usr/include/radcli/version.h
+./usr/include/radcli/radcli.h
+./usr/include/freeradius-client.h
+./host

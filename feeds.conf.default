@@ -1,0 +1,69 @@
+src-git base /home/han/misc/glweb/qsdk5
+src-git gli_pub https://github.com/gl-inet/gli-pub.git
+src-link packages ../qca/feeds/packages
+## using openwrt feeds, too many compile error
+## src-git packages https://github.com/openwrt/packages.git;for-15.05
+
+src-link networking ../qca/feeds/networking
+src-link luci ../qca/feeds/luci
+src-link routing ../qca/feeds/routing
+## using openwrt feeds, too many compile error
+## src-git routing https://github.com/openwrt-routing/packages.git;for-15.05
+
+#src-link nss ../qca/feeds/nss
+src-link nss_host ../qca/feeds/nss-host
+#src-link nss_cust ../qca/feeds/nss_cust
+#src-link nss_userspace ../qca/feeds/nss-userspace
+#src-link wlan_open ../qca/feeds/wlan-open
+#src-link ath10k_firmware ../qca/feeds/ath10k-firmware
+#src-link alljoyn ../qca/feeds/alljoyn
+#src-link wlan_11_0 ../qca/feeds/wlan_11_0
+#src-link qca_11_0 ../qca/feeds/qca_11_0
+#src-link wlan_10_4 ../qca/feeds/wlan_10_4
+src-link qca_10_4 ../qca/feeds/qca_10_4
+src-link athdiag ../qca/feeds/athdiag
+#src-link art2 ../qca/feeds/art2
+#src-link athtestcmd ../qca/feeds/athtestcmd
+#src-link wapid ../qca/feeds/wapid
+#src-link qcom_utils_internal ../qca/feeds/qcom-utils-internal
+src-link shortcut_fe ../qca/feeds/shortcut-fe
+src-link qca_mcs ../qca/feeds/qca-mcs
+src-link qca_lib ../qca/feeds/qca-lib
+#src-link apple_homekit ../qca/feeds/apple-homekit
+src-link ieee1905_security ../qca/feeds/ieee1905-security
+src-link hyfi ../qca/feeds/hyfi
+#src-link qca_plc ../qca/feeds/qca-plc
+src-link whc ../qca/feeds/whc
+#src-link sigma_dut_10_4 ../qca/feeds/sigma-dut-10.4
+src-link weave ../qca/feeds/weave
+#src-link bluetopia ../qca/feeds/bluetopia
+#src-link wigig_utils ../qca/feeds/wigig-utils
+#src-link wigig_firmware ../qca/feeds/wigig-firmware
+#src-link streamboost3 ../qca/feeds/streamboost3
+#src-link lte_cm ../qca/feeds/lte-cm
+src-link ssdk ../qca/feeds/ssdk
+#src-link bluetooth ../qca/feeds/bluetooth
+#src-link zigbee ../qca/feeds/zigbee_efr32
+#src-link ioe_bridges ../qca/feeds/ioe-bridges
+#src-link qca_hk ../qca/feeds/qca_hk
+#src-link qca_np ../qca/feeds/qca_np
+#src-link qca_lit ../qca/feeds/qca-lit
+#src-link csrmesh ../qca/feeds/csrmesh
+#src-link sigma_dut ../qca/feeds/sigma-dut
+
+# Package with content
+# 48K     bin/ipq806x/packages/athdiag
+# 43M     bin/ipq806x/packages/base
+# 304K    bin/ipq806x/packages/hyfi
+# 168K    bin/ipq806x/packages/ieee1905_security
+# 48K     bin/ipq806x/packages/networking
+# 1.5M    bin/ipq806x/packages/nss_host
+# 236M    bin/ipq806x/packages/packages
+# 4.9M    bin/ipq806x/packages/qca_10_4
+# 52K     bin/ipq806x/packages/qca_lib
+# 44K     bin/ipq806x/packages/qca_mcs
+# 2.4M    bin/ipq806x/packages/routing
+# 80K     bin/ipq806x/packages/shortcut_fe
+# 1.4M    bin/ipq806x/packages/ssdk
+# 172K    bin/ipq806x/packages/weave
+# 232K    bin/ipq806x/packages/whc

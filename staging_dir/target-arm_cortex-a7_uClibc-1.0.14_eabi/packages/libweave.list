@@ -1,0 +1,15 @@
+./
+./usr
+./usr/lib
+./usr/lib/libweave
+./usr/lib/libweave/libweave.so
+./usr/sbin
+./usr/sbin/weave_daemon_sample
+./usr/sbin/weave_daemon_speaker
+./usr/sbin/weave_daemon_light
+./usr/sbin/weave_daemon_lock
+./usr/sbin/weave_daemon_oven
+./usr/sbin/weave_daemon_ledflasher
+./usr/include
+./usr/include/libweave
+./host

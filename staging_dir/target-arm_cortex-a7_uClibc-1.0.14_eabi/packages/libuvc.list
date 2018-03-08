@@ -1,0 +1,9 @@
+./
+./usr
+./usr/lib
+./usr/lib/libuvc.so
+./usr/include
+./usr/include/libuvc
+./usr/include/libuvc/libuvc_config.h
+./usr/include/libuvc/libuvc.h
+./host

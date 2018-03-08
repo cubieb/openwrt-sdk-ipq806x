@@ -1,0 +1,9 @@
+./
+./usr
+./usr/lib
+./usr/lib/libglinet.so
+./usr/include
+./usr/include/gl
+./usr/include/gl/qdecoder.h
+./usr/include/gl/cgi.h
+./host

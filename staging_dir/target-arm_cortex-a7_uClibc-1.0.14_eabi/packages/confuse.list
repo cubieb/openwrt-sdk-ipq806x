@@ -1,0 +1,12 @@
+./
+./usr
+./usr/lib
+./usr/lib/libconfuse.so.0
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/libconfuse.pc
+./usr/lib/libconfuse.so.0.0.0
+./usr/lib/libconfuse.so
+./usr/lib/libconfuse.a
+./usr/include
+./usr/include/confuse.h
+./host

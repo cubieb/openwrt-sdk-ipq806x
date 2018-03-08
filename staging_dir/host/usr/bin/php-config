@@ -1,0 +1,90 @@
+#! /bin/sh
+
+SED="/home/han/misc/glweb/qsdk5-next/staging_dir/host/bin/sed"
+prefix="/home/han/misc/glweb/qsdk5-next/staging_dir/host/usr"
+datarootdir="/usr/php"
+exec_prefix="/home/han/misc/glweb/qsdk5-next/staging_dir/host/usr"
+version="5.6.17"
+vernum="50617"
+include_dir="${prefix}/include/php"
+includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
+ldflags=" -L/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib"
+libs="-lcrypt   -lcrypt -lz -lpcre -lm -ldl  -lxml2 -lz -lm -ldl -lcrypt -lcrypt "
+extension_dir='/usr/lib/php/extensions/no-debug-non-zts-20131226'
+man_dir=`eval echo /usr/man`
+program_prefix=""
+program_suffix=""
+exe_extension=""
+php_cli_binary=NONE
+php_cgi_binary=NONE
+configure_options=" '--target=arm-openwrt-linux' '--host=arm-openwrt-linux' '--build=x86_64-linux-gnu' '--program-prefix=' '--program-suffix=' '--prefix=/usr' '--exec-prefix=/usr' '--bindir=/usr/bin' '--sbindir=/usr/sbin' '--libexecdir=/usr/lib' '--sysconfdir=/etc' '--datadir=/usr/share' '--localstatedir=/var' '--mandir=/usr/man' '--infodir=/usr/info' '--disable-nls' '--enable-cli' '--enable-cgi' '--enable-fpm' '--enable-shared' '--disable-static' '--disable-rpath' '--disable-debug' '--without-pear' '--with-config-file-path=/etc' '--with-config-file-scan-dir=/etc/php5' '--disable-short-tags' '--with-zlib=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-zlib-dir=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-pcre-regex=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--disable-phar' '--enable-calendar=shared' '--enable-ctype=shared' '--with-curl=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-fileinfo=shared' '--with-gettext=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libintl-full' '--enable-dom=shared' '--enable-exif=shared' '--enable-ftp=shared' '--with-gd=shared' '--without-freetype-dir' '--with-jpeg-dir=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-png-dir=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--without-xpm-dir' '--without-t1lib' '--enable-gd-native-ttf' '--disable-gd-jis-conv' '--with-gmp=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-hash=shared' '--with-iconv=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libiconv-stub' '--enable-json=shared' '--with-ldap=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-ldap-sasl=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-mbstring=shared' '--enable-mbregex' '--with-mcrypt=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-mysql=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-mysqli=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/bin/mysql_config' '--enable-opcache=shared' '--with-openssl=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-kerberos=no' '--with-openssl-dir=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-pcntl=shared' '--enable-pdo=shared' '--with-pdo-mysql=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-pdo-pgsql=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-pdo-sqlite=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--with-pgsql=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-session=shared' '--enable-shmop=shared' '--enable-simplexml=shared' '--enable-soap=shared' '--enable-sockets=shared' '--with-sqlite3=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-sysvmsg=shared' '--enable-sysvsem=shared' '--enable-sysvshm=shared' '--enable-tokenizer=shared' '--enable-xml=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-xmlreader=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-xmlwriter=shared,/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr' '--enable-zip=shared' '--disable-filter' '--enable-libxml' '--with-libxml-dir=/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/include/libxml2' '--with-system-tzdata' 'build_alias=x86_64-linux-gnu' 'host_alias=arm-openwrt-linux' 'target_alias=arm-openwrt-linux' 'CC=arm-openwrt-linux-uclibcgnueabi-gcc' 'CFLAGS=-Os '-pipe' '-march=armv7-a' '-mtune=cortex-a7' '-fno-caller-saves' '-fhonour-copts' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-result' '-mfloat-abi=soft' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libiconv-stub/include' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libintl-stub/include' 'LDFLAGS=-L/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib '-L/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/lib' '-L/home/han/misc/glweb/qsdk5-next/staging_dir/toolchain-arm_cortex-a7_gcc-4.8-linaro_uClibc-1.0.14_eabi/usr/lib' '-L/home/han/misc/glweb/qsdk5-next/staging_dir/toolchain-arm_cortex-a7_gcc-4.8-linaro_uClibc-1.0.14_eabi/lib' '-L/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libiconv-stub/lib' '-L/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libintl-stub/lib' 'CPPFLAGS=-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/include '-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/include' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/toolchain-arm_cortex-a7_gcc-4.8-linaro_uClibc-1.0.14_eabi/usr/include' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/toolchain-arm_cortex-a7_gcc-4.8-linaro_uClibc-1.0.14_eabi/include' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libiconv-stub/include' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libintl-stub/include' 'CXX=arm-openwrt-linux-uclibcgnueabi-g++' 'CXXFLAGS=-Os '-pipe' '-march=armv7-a' '-mtune=cortex-a7' '-fno-caller-saves' '-fhonour-copts' '-Wno-error=unused-but-set-variable' '-Wno-error=unused-result' '-mfloat-abi=soft' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libiconv-stub/include' '-I/home/han/misc/glweb/qsdk5-next/staging_dir/target-arm_cortex-a7_uClibc-1.0.14_eabi/usr/lib/libintl-stub/include'"
+php_sapis=" cli fpm cgi"
+
+# Set php_cli_binary and php_cgi_binary if available
+for sapi in $php_sapis; do
+  case $sapi in
+  cli)
+    php_cli_binary="/usr/bin/${program_prefix}php${program_suffix}${exe_extension}"
+    ;;
+  cgi)
+    php_cgi_binary="/usr/bin/${program_prefix}php-cgi${program_suffix}${exe_extension}"
+    ;;
+  esac
+done
+
+# Determine which (if any) php binary is available
+if test "$php_cli_binary" != "NONE"; then
+  php_binary="$php_cli_binary"
+else
+  php_binary="$php_cgi_binary"
+fi
+
+# Remove quotes
+configure_options=`echo $configure_options | $SED -e "s#'##g"`
+
+case "$1" in
+--prefix)
+  echo $prefix;;
+--includes)
+  echo $includes;;
+--ldflags)
+  echo $ldflags;;
+--libs)
+  echo $libs;;
+--extension-dir)
+  echo $extension_dir;;
+--include-dir)
+  echo $include_dir;;
+--php-binary)
+  echo $php_binary;;
+--php-sapis)
+  echo $php_sapis;;
+--configure-options)
+  echo $configure_options;;
+--man-dir)
+  echo $man_dir;;
+--version)
+  echo $version;;
+--vernum)
+  echo $vernum;;
+*)
+  cat << EOF
+Usage: $0 [OPTION]
+Options:
+  --prefix            [$prefix]
+  --includes          [$includes]
+  --ldflags           [$ldflags]
+  --libs              [$libs]
+  --extension-dir     [$extension_dir]
+  --include-dir       [$include_dir]
+  --man-dir           [$man_dir]
+  --php-binary        [$php_binary]
+  --php-sapis         [$php_sapis]
+  --configure-options [$configure_options]
+  --version           [$version]
+  --vernum            [$vernum]
+EOF
+  exit 1;;
+esac
+
+exit 0

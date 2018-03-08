@@ -1,0 +1,12 @@
+./
+./usr
+./usr/lib
+./usr/lib/libsane.so.1.0.25
+./usr/lib/libsane.a
+./usr/lib/libsane.so
+./usr/lib/libsane.so.1
+./usr/include
+./usr/include/sane
+./usr/include/sane/sane.h
+./usr/include/sane/saneopts.h
+./host

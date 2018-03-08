@@ -1,0 +1,12 @@
+./
+./usr
+./usr/lib
+./usr/lib/pkgconfig
+./usr/lib/pkgconfig/libgpsd.pc
+./usr/lib/pkgconfig/libgps.pc
+./usr/lib/libgps.so.22.0.0
+./usr/lib/libgps.so.22
+./usr/lib/libgps.so
+./usr/include
+./usr/include/gps.h
+./host

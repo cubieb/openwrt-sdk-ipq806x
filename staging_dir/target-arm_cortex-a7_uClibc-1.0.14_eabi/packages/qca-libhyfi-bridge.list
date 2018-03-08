@@ -1,0 +1,8 @@
+./
+./usr
+./usr/lib
+./usr/lib/libhyfi-bridge.so
+./usr/include
+./usr/include/libhyfibr
+./usr/include/libhyfibr/hyfi-bridge.h
+./host

@@ -1,0 +1,16 @@
+./
+./usr
+./usr/lib
+./usr/lib/libesmtp.a
+./usr/lib/libesmtp.so.6.1.6
+./usr/lib/libesmtp.so.6
+./usr/lib/libesmtp.so
+./usr/bin
+./usr/bin/libesmtp-config
+./usr/include
+./usr/include/auth-client.h
+./usr/include/auth-plugin.h
+./usr/include/libesmtp.h
+./host
+./host/bin
+./host/bin/libesmtp-config
