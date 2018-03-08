@@ -1,0 +1,9 @@
+.config
+.config.old
+/package
+/build_dir
+/staging_dir
+/bin
+/dl
+/tmp
+/files
